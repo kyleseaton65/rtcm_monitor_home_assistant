@@ -1,0 +1,10 @@
+{
+  "domain": "rtcm_monitor",
+  "name": "RTCM Stream Monitor",
+  "version": "2.0.0",
+  "documentation": "https://github.com/yourusername/rtcm_monitor",
+  "requirements": [],
+  "codeowners": ["@yourusername"],
+  "iot_class": "cloud_push",
+  "config_flow": true
+}

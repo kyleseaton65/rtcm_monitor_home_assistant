@@ -1,0 +1,38 @@
+# Example configuration for RTCM Stream Monitor
+# Add this to your configuration.yaml file
+
+rtcm_monitor:
+  streams:
+    # Example 1: Public NTRIP caster (no authentication)
+    - name: "Public Base Station"
+      host: "rtk2go.com"
+      port: 2101
+      mountpoint: "YourMountpoint"
+      timeout: 15
+      update_interval: 30
+
+    # Example 2: Private NTRIP caster with authentication
+    - name: "Private Base Station"
+      host: "ntrip.example.com"
+      port: 2101
+      mountpoint: "BASE01"
+      username: "your_username"
+      password: "your_password"
+      timeout: 10
+      update_interval: 30
+
+    # Example 3: Local NTRIP caster
+    - name: "Local RTK Base"
+      host: "192.168.1.100"
+      port: 2101
+      mountpoint: "LOCALBASE"
+      timeout: 5
+
+# Optional: Customize entities
+homeassistant:
+  customize:
+    binary_sensor.public_base_station_connected:
+      icon: mdi:satellite-variant
+    sensor.public_base_station_message_types:
+      icon: mdi:format-list-bulleted
+
