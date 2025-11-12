@@ -1,0 +1,68 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add RTCM Stream Monitor",
+        "description": "Configure an NTRIP RTCM3 stream to monitor",
+        "data": {
+          "name": "Stream Name",
+          "host": "NTRIP Server Host",
+          "port": "Port",
+          "mountpoint": "Mountpoint",
+          "username": "Username (optional)",
+          "password": "Password (optional)",
+          "timeout": "Connection Timeout (seconds)",
+          "update_interval": "Update Interval (seconds)"
+        },
+        "data_description": {
+          "name": "A friendly name for this RTCM stream",
+          "host": "Hostname or IP address of the NTRIP caster",
+          "port": "Port number (usually 2101)",
+          "mountpoint": "NTRIP mountpoint name",
+          "username": "Leave empty if authentication is not required",
+          "password": "Leave empty if authentication is not required",
+          "timeout": "How long to wait for data before timing out (5-60 seconds)",
+          "update_interval": "How often to update Home Assistant state (10-300 seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to NTRIP server. Check your settings and network connection.",
+      "unknown": "Unexpected error occurred. Check the logs for more information."
+    },
+    "abort": {
+      "already_configured": "A stream with this name is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure RTCM Stream",
+        "description": "Update stream settings (stream name cannot be changed)",
+        "data": {
+          "host": "NTRIP Server Host",
+          "port": "Port",
+          "mountpoint": "Mountpoint",
+          "username": "Username (optional)",
+          "password": "Password (optional)",
+          "timeout": "Connection Timeout (seconds)",
+          "update_interval": "Update Interval (seconds)"
+        },
+        "data_description": {
+          "host": "Hostname or IP address of the NTRIP caster",
+          "port": "Port number (usually 2101)",
+          "mountpoint": "NTRIP mountpoint name",
+          "username": "Leave empty if authentication is not required",
+          "password": "Leave empty if authentication is not required",
+          "timeout": "How long to wait for data before timing out (5-60 seconds)",
+          "update_interval": "How often to update Home Assistant state (10-300 seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to NTRIP server with new settings.",
+      "unknown": "Unexpected error occurred. Check the logs for more information."
+    }
+  }
+}
+
