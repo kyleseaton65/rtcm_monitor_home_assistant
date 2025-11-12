@@ -2,9 +2,10 @@
   "domain": "rtcm_monitor",
   "name": "RTCM Stream Monitor",
   "version": "2.0.0",
-  "documentation": "https://github.com/yourusername/rtcm_monitor",
+  "documentation": "https://github.com/kyleseaton65/rtcm_monitor_home_assistant",
   "requirements": [],
   "codeowners": ["@yourusername"],
   "iot_class": "cloud_push",
   "config_flow": true
 }
+
